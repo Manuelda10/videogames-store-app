@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {NavLink} from 'react-router-dom'
 
 const colors = {
     "richblack": "#000411",
@@ -20,7 +21,7 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
 `
 
-export const Stylebrand = styled.a`
+export const Stylebrand = styled(NavLink)`
     text-decoration: none;
     color: white;
     font-size: 18px;
