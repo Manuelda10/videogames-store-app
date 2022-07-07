@@ -24,7 +24,7 @@ const Header = () => {
             <StyledUserHandle>
                 <StyledUser>User</StyledUser>
                 <StyledButton onClick={handleOpenModal}>Sign in</StyledButton>
-                <StyledShoppingCart><ShoppingCartIcon width={'30px'} ></ShoppingCartIcon></StyledShoppingCart>
+                <StyledShoppingCart to='/carrito' ><ShoppingCartIcon width={'30px'} ></ShoppingCartIcon></StyledShoppingCart>
             </StyledUserHandle>
 
      

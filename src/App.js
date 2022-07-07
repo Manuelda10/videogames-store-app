@@ -6,6 +6,7 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 
 
 function App() {
@@ -13,10 +14,15 @@ function App() {
     <Router>
       <div className="App">
         <Header></Header><br></br><br></br>
-        <h1>Videogames Store</h1>
         <Routes>
-          <Route path='/*' element={<Cards></Cards>}>
+          <Route path='/*' element={<div>
+              <br></br>
+              <h1>Videogames Store</h1>
+              <br></br>
+              <Cards></Cards>
+            </div>}>
           </Route>
+          <Route path='/carrito' element={<ShoppingCart></ShoppingCart>} ></Route>
           <Route path='*' element={<div>404 Not Found</div>} ></Route>
         </Routes>
       </div>

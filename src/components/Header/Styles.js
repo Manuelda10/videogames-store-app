@@ -66,7 +66,7 @@ export const StyledButton = styled.button`
     }
 `
 
-export const StyledShoppingCart = styled.button`
+export const StyledShoppingCart = styled(NavLink)`
     background-color: transparent;
     cursor: pointer;
     border: none;
