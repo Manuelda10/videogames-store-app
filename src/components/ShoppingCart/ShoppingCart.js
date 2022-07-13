@@ -1,51 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import imgGame from '../../assets/game.jpg'
+import {Container, Detail, ItemDetails, Encabezado, Title, Items, Item, ImgContainer, ImgItem, ItemName, CantidadInput, Summarize, Info, Line} from './Styles'
 
-const Container = styled.div`
-    width: 92%;
-    margin-left: 4%;
-    margin-right: 4%;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 10px;
-`
-
-const Detail = styled.div`
-    width: 100%;
-    box-sizing: border-box;
-`
-
-const Summarize = styled.div`
-    width: 100%;
-    text-align: left;
-    box-sizing: border-box;
-    line-height: 8px;
-    background-color: #E1EFE6;
-    border-radius: 2px;
-`
-
-const Encabezado = styled.div`
-    display: grid;
-    grid-template-columns: 5fr 2fr 1fr 2fr;
-    background-color: #AEB7B3;
-    place-items: center center;
-    border-radius: 2px;
-`
-
-const Title = styled.p`
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    line-height: 18px;
-    color: #000411;
-`
-
-const Line = styled.hr`
-    width: 100%;
-    height: 2px;
-    background-color: #000411;
-    border: none;
-`
 
 const ShoppingCart = () => {
     return (
@@ -57,23 +13,37 @@ const ShoppingCart = () => {
                 <Detail>
                     <Encabezado>
                         <Title>Producto</Title>
-                        <Title>Precio base</Title>
+                        <Title>Precio</Title>
                         <Title>Cantidad</Title>
                         <Title>Total</Title>
                     </Encabezado>
+                    <Items>
+                        <Item>
+                            {/*Aquí falta colocar el state del input*/}
+                            <ImgContainer>
+                                <ImgItem src={imgGame} alt='juego' ></ImgItem>
+                            </ImgContainer>
+                            <ItemDetails>
+                                <ItemName>Assassins Creed IV: Black Flag</ItemName>
+                                <p>S/.120</p>
+                                <CantidadInput placeholder='Cantidad' type='number' name='cantidad'></CantidadInput>
+                                <p>S/. 1440</p>
+                            </ItemDetails>
+                            
+                        </Item>
+                    </Items>
+
                 </Detail>
                 <Summarize>
-                    <div style={{paddingLeft: '10px', paddingRight: '10px'}} >
                         <Title>Resumen</Title>
                         <Line></Line>
-                        <p>Total de productos: 12</p>
-                        <p>Precio con IGV: </p>
-                        <p>Costo de envío: </p>
-                        <p>Cupones y descuentos: </p>
+                        <Info>Total de productos: 12</Info>
+                        <Info>Precio con IGV: </Info>
+                        <Info>Costo de envío: </Info>
+                        <Info>Cupones y descuentos: </Info>
                         <br></br>
-                        <p>Total IGV (18%)</p>
-                        <p>Total de la orden: S/. 1500</p>
-                    </div>
+                        <Info>Total IGV (18%)</Info>
+                        <Info>Total de la orden: S/. 1500</Info>
                     
                 </Summarize>
             </Container>
