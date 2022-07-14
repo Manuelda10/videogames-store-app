@@ -22,7 +22,7 @@ function App() {
               <Cards></Cards>
             </div>}>
           </Route>
-          <Route path='/carrito' element={<ShoppingCart></ShoppingCart>} ></Route>
+          <Route path='/carrito/*' element={<ShoppingCart></ShoppingCart>} ></Route>
           <Route path='*' element={<div>404 Not Found</div>} ></Route>
         </Routes>
       </div>

@@ -31,6 +31,7 @@ export const Summarize = styled.div`
     border-radius: 2px;
     padding-left: 4px;
     padding-right: 4px;
+    padding-bottom: 8px;
     @media screen and (max-width: 600px) {
         margin-top: 10px;
         padding-top: 1px;
@@ -142,4 +143,22 @@ export const Line = styled.hr`
     height: 2px;
     background-color: #000411;
     border: none;
+`
+
+export const Button = styled.button`
+    width: 8rem;
+    border-radius: 2px;
+    border: none;
+    background-color: #000411;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: calc(50% - 4rem);
+    margin-right: calc(50% - 4rem);
+
+    &:hover{
+        background-color: #000C35;
+    }
 `
