@@ -1,18 +1,35 @@
 import React from 'react'
+import { BackBtn, Button, ButtonsContainer, Product, ReviewContainer, Total } from './Styles'
 
 const Review = () => {
     return (
-        <div>
-            <p>Resumen de la orden</p>
-            <p>Producto 1</p>
-            <p>Producto 2</p>
-            <p>Producto 3</p>
-            <p>Producto 4</p>
-            <p>Total: S/.40</p>
-            <p>Detalles de pago</p>
-            <button>Atrás</button>
-            <button>Confirmar orden</button>
-        </div>
+        <ReviewContainer>
+            <Product>
+                <p>Producto 1 sadfasdf asdf as dfas dfas dfsa dfs asdfsadfasdf </p>
+                <p>S/.120</p>
+            </Product>
+            <Product>
+                <p>Producto 2</p>
+                <p>S/.120</p>
+            </Product>
+            <Product>
+                <p>Producto 3</p>
+                <p>S/.120</p>
+            </Product>
+            <Product>
+                <p>Producto 4</p>
+                <p>S/.120</p>
+            </Product>
+            <Total>
+                <h4>Total</h4>
+                <h4>S/.480</h4>
+            </Total>
+            <ButtonsContainer width={'11rem'}>
+                <BackBtn>Atrás</BackBtn>
+                <Button>Confirmar</Button>
+            </ButtonsContainer>
+            
+        </ReviewContainer>
     )
 }
 

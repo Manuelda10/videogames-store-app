@@ -17,7 +17,7 @@ const Address = () => {
                     <label><input type='checkbox'></input>Usar esta dirección para los detalles de pago</label><br></br>
                 </LabelCont>
             </InputsContainer>
-            <ButtonsContainer>
+            <ButtonsContainer width={'7.5rem'} >
                 <Button>Siguiente</Button>
             </ButtonsContainer>
             

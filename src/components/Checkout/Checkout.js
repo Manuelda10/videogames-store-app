@@ -1,7 +1,7 @@
 import React from 'react'
 import Address from './Address'
 import Payment from './Payment'
-//import Review from './Review'
+import Review from './Review'
 import { ReactComponent as CloseIcon } from '../../assets/closeIcon.svg'
 import { StyledCheckout, CloseButton, HeaderCheckout, Step, Circle } from './Styles'
 
@@ -23,7 +23,7 @@ const Checkout = ({onClose}) => {
                     <p>Resumen de compra</p>
                 </Step>
             </HeaderCheckout>
-            <Payment></Payment>
+            <Address></Address>
             <CloseButton onClick={() => onClose()}
             ><CloseIcon width={'18px'} ></CloseIcon></CloseButton>
         </StyledCheckout>

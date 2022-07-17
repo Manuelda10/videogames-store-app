@@ -70,6 +70,10 @@ export const AddressContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width:28rem;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
 `
 
 export const InputsContainer = styled.div`
@@ -118,17 +122,22 @@ export const ButtonsContainer = styled.div`
 export const Button = styled.button`
     width: 8rem;
     border-radius: 2px;
-    border: none;
-    background-color: #000411;
-    color: white;
+    box-sizing: border-box;
+    border: 2px solid ${colors.darkpurple};
+    background-color: white;
+    color: ${colors.darkpurple};
+    font-weight: 550;
     font-size: 16px;
     padding: 8px;
     cursor: pointer;
     transition: 0.3s;
     &:hover{
-        background-color: #000C35;
+        background-color: ${colors.darkpurple};
+        color: white;
     }
 `
+
+/*----------------PAYMENT------------------------*/
 
 export const BackBtn = styled.button`
     border-radius: 2px;
@@ -145,5 +154,47 @@ export const BackBtn = styled.button`
     }
 `
 
+/*----------------------REVIEW------------------------*/
+
+export const ReviewContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width:28rem;
+    @media screen and (max-width: 480px) {
+        width: 18rem;
+    }
+    background-color: red;
+`
+
+export const Product = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    & > p{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-inline: 8px;
+    border: 2px solid ${colors.ashgray};
+
+`
+
+export const Total = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    & > h4{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    margin-top: 5px;
+    margin-bottom: 18px;
+    padding-inline: 8px;
+    border: 2px dotted ${colors.darkpurple};
+`
 
 

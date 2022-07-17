@@ -14,7 +14,7 @@ const Payment = () => {
                 </LabelCont>
                 
             </InputsContainer> 
-            <ButtonsContainer width={'12rem'} >
+            <ButtonsContainer width={'11rem'} >
                 <BackBtn>Atrás</BackBtn>
                 <Button>Siguiente</Button>
             </ButtonsContainer>
