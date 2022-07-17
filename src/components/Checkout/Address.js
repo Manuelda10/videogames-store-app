@@ -1,19 +1,27 @@
 import React from 'react'
+import { Input, AddressContainer, InputsContainer, Button, LabelCont, ButtonsContainer } from './Styles'
 
 const Address = () => {
     return (
-        <div>
-            <input type='text' placeholder='Nombre' ></input>
-            <input type='text' placeholder='Apellido' ></input><br></br>
-            <input type='text' placeholder='Dirección 1' ></input><br></br>
-            <input type='text' placeholder='Dirección 2' ></input><br></br>
-            <input type='text' placeholder='Ciudad' ></input>
-            <input type='text' placeholder='Estado/Provincia/Región'></input><br></br>
-            <input type='text' placeholder='ZIP/Código postal'></input>
-            <input type='text' placeholder='País'></input><br></br>
-            <label><input type='checkbox'></input>Usar esta dirección para los detalles de pago</label><br></br>
-            <button>Siguiente</button>
-        </div>
+        <AddressContainer>
+            <InputsContainer>
+                <Input type='text' placeholder='Nombre' ></Input>
+                <Input type='text' placeholder='Apellido' ></Input><br></br>
+                <Input type='text' placeholder='Dirección 1' size={'28.5rem'} ></Input><br></br>
+                <Input type='text' placeholder='Dirección 2' size={'28.5rem'}></Input><br></br>
+                <Input type='text' placeholder='Ciudad' ></Input>
+                <Input type='text' placeholder='Estado/Provincia/Región'></Input><br></br>
+                <Input type='text' placeholder='ZIP/Código postal'></Input>
+                <Input type='text' placeholder='País'></Input><br></br>
+                <LabelCont>
+                    <label><input type='checkbox'></input>Usar esta dirección para los detalles de pago</label><br></br>
+                </LabelCont>
+            </InputsContainer>
+            <ButtonsContainer>
+                <Button>Siguiente</Button>
+            </ButtonsContainer>
+            
+        </AddressContainer>
     )
 }
 

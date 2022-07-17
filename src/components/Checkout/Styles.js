@@ -9,8 +9,9 @@ const colors = {
 }
 
 export const StyledCheckout = styled.div`
-    height: 35rem;
-    width: 35rem;
+    width: 30rem;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
     background-color: white;
     position: relative;
     display: flex;
@@ -19,6 +20,7 @@ export const StyledCheckout = styled.div`
     border: 2px solid #AEB7B3;
     border-radius: 5px;
     @media screen and (max-width: 480px){
+        padding-inline: 0;
         width: 20rem;
     }
 `
@@ -37,7 +39,7 @@ export const CloseButton = styled.button`
     font-weight: 600;
 `
 export const HeaderCheckout = styled.div`
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -46,6 +48,7 @@ export const Step = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
     
 `
 
@@ -59,6 +62,87 @@ export const Circle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+`
+
+/*-----------------------ADDRESS---------------------*/
+export const AddressContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+export const InputsContainer = styled.div`
+    display: block; 
+    margin-bottom: 0.5rem;
+`
+
+export const Input = styled.input`
+    font-size: 16px;
+    border-radius: 2px;
+    padding: 5px;
+    border: 1px solid ${colors.ashgray};
+    outline: none;
+    box-sizing: border-box;
+    width: ${props => props.size || '14rem'};
+    &:focus{
+        border: 1px solid ${colors.richblack};
+    }
+    margin-inline: 0.25rem;
+    margin-block: 0.25rem;
+
+    @media screen and (max-width: 480px) {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }   
+`
+
+export const LabelCont = styled.div`
+    @media screen and (max-width: 480px) {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+`
+
+export const ButtonsContainer = styled.div`
+    display: flex;
+    margin-left: calc(100% - ${props => props.width || '8.5rem'});
+    @media screen and (max-width: 480px){
+        margin-left: calc(50% - ${props => props.width/2 || '4rem'});
+        margin-right: calc(50% - ${props => props.width/2 || '4rem'});
+    }
+`
+
+export const Button = styled.button`
+    width: 8rem;
+    border-radius: 2px;
+    border: none;
+    background-color: #000411;
+    color: white;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        background-color: #000C35;
+    }
+`
+
+export const BackBtn = styled.button`
+    border-radius: 2px;
+    border: none;
+    background-color: transparent;
+    color: ${colors.ashgray};
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    &:hover{
+        color: ${colors.darkpurple};
+    }
 `
 
 
