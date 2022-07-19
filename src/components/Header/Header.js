@@ -23,8 +23,8 @@ const Header = () => {
             <Stylebrand to='/'>Gaming Store</Stylebrand>
             <StyledUserHandle>
                 <StyledUser>User</StyledUser>
-                <StyledButton onClick={handleOpenModal}>Sign in</StyledButton>
-                <StyledShoppingCart to='/carrito' ><ShoppingCartIcon width={'30px'} ></ShoppingCartIcon></StyledShoppingCart>
+                <StyledButton onClick={handleOpenModal}>Login</StyledButton>
+                <StyledShoppingCart to='carrito' ><ShoppingCartIcon width={'30px'} ></ShoppingCartIcon></StyledShoppingCart>
             </StyledUserHandle>
 
      

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Input, AddressContainer, InputsContainer, Button, BackBtn, LabelCont, ButtonsContainer } from './Styles'
 
-const Payment = () => {
+const Payment = ({handleStep}) => {
     return (
         <AddressContainer>
             <InputsContainer>
@@ -15,8 +15,8 @@ const Payment = () => {
                 
             </InputsContainer> 
             <ButtonsContainer width={'11rem'} >
-                <BackBtn>Atrás</BackBtn>
-                <Button>Siguiente</Button>
+                <BackBtn onClick={() => handleStep(1)} >Atrás</BackBtn>
+                <Button onClick={() => handleStep(3)} >Siguiente</Button>
             </ButtonsContainer>
             
         </AddressContainer>

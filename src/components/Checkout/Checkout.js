@@ -1,11 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Address from './Address'
 import Payment from './Payment'
 import Review from './Review'
 import { ReactComponent as CloseIcon } from '../../assets/closeIcon.svg'
 import { StyledCheckout, CloseButton, HeaderCheckout, Step, Circle } from './Styles'
 
-const Checkout = ({onClose}) => {
+const Checkout = ({ onClose }) => {
+    
+    const [step, setStep] = useState(1);
+
+    const handleStep = (st) => {
+        setStep(st)
+    }
+
     return (
         <StyledCheckout>
             <h1>Pasarela de pago</h1>
@@ -23,7 +30,14 @@ const Checkout = ({onClose}) => {
                     <p>Resumen de compra</p>
                 </Step>
             </HeaderCheckout>
-            <Address></Address>
+            {
+                step === 1
+                    ? <Address handleStep={handleStep} ></Address>
+                    : step === 2 
+                        ? <Payment handleStep={handleStep}></Payment>
+                        : <Review handleStep={handleStep}></Review>
+            }
+            
             <CloseButton onClick={() => onClose()}
             ><CloseIcon width={'18px'} ></CloseIcon></CloseButton>
         </StyledCheckout>

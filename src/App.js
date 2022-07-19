@@ -7,6 +7,7 @@ import {
   Route
 } from 'react-router-dom'
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -15,16 +16,16 @@ function App() {
       <div className="App">
         <Header></Header><br></br><br></br>
         <Routes>
-          <Route path='/*' element={<div>
+          <Route path='/*' index element={<div>
               <br></br>
-              <h1>Videogames Store</h1>
-              <br></br>
-              <Cards></Cards>
-            </div>}>
+              <h1>Videojuegos</h1>
+            <Cards></Cards>
+          </div>}>
           </Route>
           <Route path='/carrito/*' element={<ShoppingCart></ShoppingCart>} ></Route>
-          <Route path='*' element={<div>404 Not Found</div>} ></Route>
+          <Route path='*' element={<h1>Not page found</h1>}></Route>
         </Routes>
+        <Footer></Footer>
       </div>
     </Router>
   );

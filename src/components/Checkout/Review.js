@@ -1,11 +1,11 @@
 import React from 'react'
 import { BackBtn, Button, ButtonsContainer, Product, ReviewContainer, Total } from './Styles'
 
-const Review = () => {
+const Review = ({handleStep}) => {
     return (
         <ReviewContainer>
             <Product>
-                <p>Producto 1 sadfasdf asdf as dfas dfas dfsa dfs asdfsadfasdf </p>
+                <p>Producto 1</p>
                 <p>S/.120</p>
             </Product>
             <Product>
@@ -25,8 +25,8 @@ const Review = () => {
                 <h4>S/.480</h4>
             </Total>
             <ButtonsContainer width={'11rem'}>
-                <BackBtn>Atrás</BackBtn>
-                <Button>Confirmar</Button>
+                <BackBtn onClick={() => handleStep(2)} >Atrás</BackBtn>
+                <Button onClick={() => alert("Pago realizado")} >Confirmar</Button>
             </ButtonsContainer>
             
         </ReviewContainer>

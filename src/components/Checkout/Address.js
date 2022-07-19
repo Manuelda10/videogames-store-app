@@ -1,7 +1,7 @@
 import React from 'react'
 import { Input, AddressContainer, InputsContainer, Button, LabelCont, ButtonsContainer } from './Styles'
 
-const Address = () => {
+const Address = ({handleStep}) => {
     return (
         <AddressContainer>
             <InputsContainer>
@@ -18,7 +18,7 @@ const Address = () => {
                 </LabelCont>
             </InputsContainer>
             <ButtonsContainer width={'7.5rem'} >
-                <Button>Siguiente</Button>
+                <Button onClick={() => handleStep(2)} >Siguiente</Button>
             </ButtonsContainer>
             
         </AddressContainer>

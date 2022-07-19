@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 92%;
+    min-height: 70vh;
     margin-left: 4%;
     margin-right: 4%;
     display: grid;
@@ -25,6 +26,7 @@ export const Detail = styled.div`
 
 export const Summarize = styled.div`
     width: 100%;
+    height: 18rem;
     text-align: left;
     box-sizing: border-box;
     background-color: #E1EFE6;
@@ -148,17 +150,20 @@ export const Line = styled.hr`
 export const Button = styled.button`
     width: 8rem;
     border-radius: 2px;
-    border: none;
-    background-color: #000411;
-    color: white;
+    box-sizing: border-box;
+    border: 2px solid #000411;
+    background-color: transparent;
+    color:#000411;
     font-weight: 600;
     padding: 8px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
     margin-left: calc(50% - 4rem);
     margin-right: calc(50% - 4rem);
 
     &:hover{
-        background-color: #000C35;
+        background-color: #000411;
+        color: white;
     }
 `

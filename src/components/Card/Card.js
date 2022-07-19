@@ -18,7 +18,7 @@ const Card = () => {
                 </HeaderNameCont>
                 <HeaderPriceCont>
                     <CardPrice>
-                        $29.00
+                        S/.120.00
                     </CardPrice>
                 </HeaderPriceCont>
             </HeaderCard>
@@ -34,7 +34,7 @@ const Card = () => {
 
             <CardInteract>
                 <StarRating></StarRating>
-                <AddButton>
+                <AddButton onClick={() => alert("Producto agregado al carrito")} >
                     <IconAddProduct width={'25px'} ></IconAddProduct>
                 </AddButton>
             </CardInteract>

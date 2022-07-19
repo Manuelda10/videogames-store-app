@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Card from '../Card/Card'
 
  const ListOfCards = styled.div`
-        width: 92%;
-        margin-left: 4%;
-        margin-right: 4%;
+        width: 86%;
+        margin-left: 7%;
+        margin-right: 7%;
         display: grid;
         grid-auto-rows: 16rem;
         grid-auto-columns: 16rem;
@@ -19,6 +19,11 @@ import Card from '../Card/Card'
 const Cards = () => {
     return (<div>
         <ListOfCards>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
             <Card></Card>
             <Card></Card>
             <Card></Card>
